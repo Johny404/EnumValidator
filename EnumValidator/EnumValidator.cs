@@ -5,6 +5,13 @@ namespace EnumValidator
 {
     public static class EnumValidator
     {
+        /// <summary>
+        /// Verification of enum to contains defined values. Also works on flags enum.
+        /// </summary>
+        /// <param name="enum"></param>
+        /// <typeparam name="TEnum"></typeparam>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public static bool IsValueDefined<TEnum>(this TEnum @enum) where TEnum : Enum
         {
             var enumType = typeof(TEnum);
