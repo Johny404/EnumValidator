@@ -1,3 +1,4 @@
+using System;
 using EnumValidator;
 using FluentAssertions;
 using NUnit.Framework;
@@ -61,6 +62,12 @@ namespace Tests
         {
             var enumValue = (FlagsEnum) value;
             enumValue.IsValueDefined().Should().BeFalse();
+        }
+
+        [Test]
+        public void ExceptionTest()
+        {
+            Assert.Throws<ArgumentException>(() => { default(Enum).IsValueDefined(); });
         }
     }
 }
