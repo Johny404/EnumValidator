@@ -4,6 +4,12 @@
         <TargetFramework>netcoreapp3.0</TargetFramework>
         <AssemblyName>EnumValidator</AssemblyName>
         <RootNamespace>EnumValidator</RootNamespace>
+        <Authors>Jan Vícha</Authors>
+        <Company />
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <RepositoryUrl>https://github.com/LordSkyFury/EnumValidator</RepositoryUrl>
+        <RepositoryType>GitHub</RepositoryType>
     </PropertyGroup>
 
 </Project>
