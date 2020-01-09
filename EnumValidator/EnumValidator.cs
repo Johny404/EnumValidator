@@ -20,11 +20,9 @@ namespace EnumValidator
             
             if (enumType.GetCustomAttributes(true).OfType<Attribute>().Any(i => i.GetType() == typeof(FlagsAttribute)))
             {
-                return !@enum.ToString().Split(',', StringSplitOptions.RemoveEmptyEntries).Any(i =>
-                {
-                    var enumValue = (TEnum) Enum.Parse(enumType, i.Trim());
-                    return !Enum.IsDefined(enumType, enumValue);
-                }); // Trying to find non-defined value in flag enum
+                var value = @enum.ToString();
+                if (value.Contains(","))
+                    return true;
             }
 
             return @enum.IsDefined();
