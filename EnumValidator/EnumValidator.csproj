@@ -9,7 +9,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <RepositoryUrl>https://github.com/LordSkyFury/EnumValidator</RepositoryUrl>
-        <RepositoryType>GitHub</RepositoryType>
+        <RepositoryType></RepositoryType>
         <PackageLicenseExpression />
         <PackageLicenseFile>license.txt</PackageLicenseFile>
     </PropertyGroup>
