@@ -14,7 +14,7 @@ namespace Tests
         public void ClassicEnum_ValidValues(int value)
         {
             var enumValue = (ClassicEnum) value;
-            enumValue.IsValid().Should().BeTrue();
+            enumValue.IsValueDefined().Should().BeTrue();
         }
         
         [TestCase(-1)]
@@ -23,7 +23,7 @@ namespace Tests
         public void ClassicEnum_InvalidValues(int value)
         {
             var enumValue = (ClassicEnum) value;
-            enumValue.IsValid().Should().BeFalse();
+            enumValue.IsValueDefined().Should().BeFalse();
         }
         
         [TestCase(2)]
@@ -32,7 +32,7 @@ namespace Tests
         public void SpecificEnum_ValidValues(int value)
         {
             var enumValue = (SpecificEnum) value;
-            enumValue.IsValid().Should().BeTrue();
+            enumValue.IsValueDefined().Should().BeTrue();
         }
         
         [TestCase(-1)]
@@ -41,7 +41,7 @@ namespace Tests
         public void SpecificEnum_InvalidValues(int value)
         {
             var enumValue = (SpecificEnum) value;
-            enumValue.IsValid().Should().BeFalse();
+            enumValue.IsValueDefined().Should().BeFalse();
         }
         
         [TestCase(0)]
@@ -51,7 +51,7 @@ namespace Tests
         public void FlagsEnum_ValidValues(int value)
         {
             var enumValue = (FlagsEnum) value;
-            enumValue.IsValid().Should().BeTrue();
+            enumValue.IsValueDefined().Should().BeTrue();
         }
         
         [TestCase(666)]
@@ -60,7 +60,7 @@ namespace Tests
         public void FlagsEnum_InvalidValues(int value)
         {
             var enumValue = (FlagsEnum) value;
-            enumValue.IsValid().Should().BeFalse();
+            enumValue.IsValueDefined().Should().BeFalse();
         }
     }
 }

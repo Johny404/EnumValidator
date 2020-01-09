@@ -5,7 +5,7 @@ namespace EnumValidator
 {
     public static class EnumValidator
     {
-        public static bool IsValid<TEnum>(this TEnum @enum) where TEnum : Enum
+        public static bool IsValueDefined<TEnum>(this TEnum @enum) where TEnum : Enum
         {
             var enumType = typeof(TEnum);
             if (!enumType.IsEnum)
