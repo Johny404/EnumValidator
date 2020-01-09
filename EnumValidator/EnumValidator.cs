@@ -18,8 +18,7 @@ namespace EnumValidator
             if (!enumType.IsEnum)
                 throw new ArgumentException("TEnum must be an enum parameter");
             
-            var attributeList = enumType.GetCustomAttributes(true).OfType<Attribute>().ToList();
-            if (attributeList.Any(i => i.GetType() == typeof(FlagsAttribute)))
+            if (enumType.GetCustomAttributes(true).OfType<Attribute>().Any(i => i.GetType() == typeof(FlagsAttribute)))
             {
                 return !@enum.ToString().Split(',', StringSplitOptions.RemoveEmptyEntries).Any(i =>
                 {
