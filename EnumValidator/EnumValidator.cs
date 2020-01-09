@@ -6,7 +6,7 @@ namespace EnumValidator
     public static class EnumValidator
     {
         /// <summary>
-        /// Verification of enum to contains defined values. Also works on flags enum.
+        /// Verification of enum if it contains defined value. Also works on flags enum.
         /// </summary>
         /// <param name="enum"></param>
         /// <typeparam name="TEnum"></typeparam>
